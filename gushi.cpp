@@ -61,12 +61,7 @@ int init() {
  * @brief 生成试题
  * 
  * @param a 生成试题的数量
- * @param f 
- * 生成试题的限制范围。多个用'|'隔开。
- * 使用例:
- *     10 91 (生成10道题,出题范围是九年级上册)
- *     20 8|91(生成20道题,出题范围是八年级上下册与九年级上册)
- *     100 7|8|9 (生成100道题,出题范围是整个初中阶段)
+ * @param f 生成试题的限制范围。多个用'|'隔开。e.g. 91(九年级上册),8|91(八年级&九年级上册),7|8|9(初中阶段)
  * @param strpro 生成的试题会被存放至该变量中。
  * @param strans 生成试题的答案会被存放至该变量中。
  * 
@@ -100,7 +95,7 @@ int generate(int a, string f, string& strpro, string& strans) {
         vector<string> v2;
         string s1copy = s1;
         for(int j=0;j<(int)sr1.size();j++) replace_all(s1copy,sr1[j],"|");
-        split(s1copy,v2,'|');
+        split(s1copy,v2,'|'); remove(begin(v2),end(v2),"");
         int ra2 = getRand(0,v2.size());
         string s2 = v2[ra2];
         for(int j=0;j<(int)sr2.size();j++) replace_all(s2,sr2[j],"");

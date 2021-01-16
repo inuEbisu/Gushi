@@ -2,8 +2,12 @@
 #include<string>
 using namespace std;
 
-// https://zhuanlan.zhihu.com/p/56163976
 typedef unsigned int size_t;
+
+/** 
+ * @brief 分割字符串
+ * @author https://zhuanlan.zhihu.com/p/56163976
+*/
 void split(const string& s, vector<string>& tokens, char delim = ' ') {
     tokens.clear();
     auto string_find_first_not = [s, delim](size_t pos = 0) -> size_t {
