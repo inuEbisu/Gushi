@@ -15,22 +15,6 @@ CJsonObject config;
 
 //#define debug
 
-int help() {
-    string guide = 
-    "语文古诗词文言文填空生成器\n"
-    "帮助:\n"
-    "   -h 查看帮助\n"
-    "   <数量> 指定生成题目数量。不指定默认为5。\n"
-    "   <范围> 指定出题范围。格式为'年级(+册数)'。多个用'|'隔开。不指定则为全部。\n"
-    "使用例:\n"
-    "   10 91 (生成10道题,出题范围是九年级上册)\n"
-    "   20 8|91(生成20道题,出题范围是八年级上下册与九年级上册)\n"
-    "   100 7|8|9 (生成100道题,出题范围是整个初中阶段)\n"
-    ;
-    cout << guide;
-    return 0;
-}
-
 /**
  * @brief 初始化
  * 
@@ -132,10 +116,10 @@ string generate(int a, string f) {
 */
 int main(int argc, char** argv) {
     init();
-    
+    system("title 语文古诗词文言文填空生成器");
     int a=5; string f="";
     cin >> a >> f;
     cout << generate(a,f);
-
+    system("pause");
     return 0;
 }
