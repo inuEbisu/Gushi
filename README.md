@@ -25,7 +25,7 @@
 
 不太好解释,直接上图,体会一下。
 
-![explain](https://imgchr.com/i/y9ypEF)
+![explain](https://s3.ax1x.com/2021/01/28/y9ypEF.jpg)
 
 类似16进制地,9往后的数字可以用ABCD等字母来表示。
 
